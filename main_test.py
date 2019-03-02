@@ -1,3 +1,6 @@
-from KNN import KNN
-data, label = KNN.KNN.generateDigitDataSet()
-KNN.KNN.testForDigit(data, label)
+from DecisionTree import DecisionTree
+
+tree = DecisionTree.DecisionTree()
+tree.readData("dataSet/datingTestSet2.txt")
+node = tree.build_tree()
+print(tree.predictTraining())
